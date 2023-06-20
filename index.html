@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ブラウザの閉じるボタンを押したときにアラートを表示</title>
+    <script>
+      window.addEventListener("beforeunload", function (event) {
+        event.preventDefault();
+        event.returnValue = "";
+      });
+    </script>
+  </head>
+  <body>
+    ブラウザの閉じるボタンを押したときにアラートを表示<br />
+    フォームを一度クリックしてから試して下さい。
+    <form action="">
+      <input type="text" />
+    </form>
+  </body>
+</html>
